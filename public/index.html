@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://unpkg.com/vue@3"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+<div id="vue-app">
+	<p>{{message}}</p>
+	<h1>To Do List</h1>
+	<task-list :tasks="tasks" v-on:delete-task="delete_task" v-on:toggle-task-status="toggle_status"></task-list>
+	<task-creator v-on:add-task="add_task"></task-creator>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
